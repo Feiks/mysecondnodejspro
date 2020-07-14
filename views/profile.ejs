@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        body {
+            background: skyblue;
+            font-family: verdana;
+            color: #fff;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 48px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+   h2 {
+            font-size: 48px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        p {
+            font-size: 16 px;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <%- include ('partials/nav.ejs'); -%>
+    <h1>Welcome to the profile of <%= person%> </h1>
+
+    <p><strong>Age: </strong><%= data.age %></p>
+    <p><strong>Job: </strong><%= data.job %></p>
+<h1>Location: <%= boom.place %></h1>
+    <h1>Neighbor: <%= boom.neighbor %></h1>
+
+    <h1>Family <%= mar.quantity %></h1>
+<h1>Marital Status <%=mar.maritalstat %></h1>
+<h1>House Living <%=living.house %></h1>
+<h1>House Living <%=living.floors %></h1>
+<h2>Hobbies</h2>
+    <ul>
+       <% data.hobby.forEach(function(item)
+       { %>
+           <li><%= item %></li>
+
+           <% }); %>
+
+
+
+
+    </ul>
+</body>
+
+</html>
